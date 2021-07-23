@@ -54,8 +54,16 @@ export class CommentService {
   getPDF() {
     const urlTest = "https://myopiacomment-e053.restdb.io/media/Ebook+Business+Guide+v4.pdf?key=385608050052956931646";
     const urlProd = "https://myopiacomment-e053.restdb.io/media/5f81d89879224600000d9419?key=25865691315171198606";
-    return this.http.get(urlProd
-      , { responseType: 'blob' });
+    const urlProd1 = "https://myopiacomment-e053.restdb.io/media/5f81d89879224600000d9419";
+    // const urlProd1 = "https://myopiacomment-e053.restdb.io/media/5f81d89879224600000d9419?key=5d9b3d61a8d63a5e8700c0df";
+     const urlProdFirebase = "https://firebasestorage.googleapis.com/v0/b/uploadebook-481eb.appspot.com/o/EBOOK%20MYOPIA%20IS%20REVERSIBLE%20BY%20RENCE.pdf?alt=media&token=6646d2f2-4e87-4fe4-a390-bf41da25801b";
+    // const urlProdFirebase = "/v0/b/uploadebook-481eb.appspot.com/o/EBOOK%20MYOPIA%20IS%20REVERSIBLE%20BY%20RENCE.pdf?alt=media&token=6646d2f2-4e87-4fe4-a390-bf41da25801b";
+    return this.http.get(urlProdFirebase
+      , { 
+        responseType: 'blob'
+        // responseType: 'blob' as 'json',
+        // observe: 'response'
+       });
   }
 
 

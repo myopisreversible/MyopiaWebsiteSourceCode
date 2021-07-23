@@ -69,7 +69,8 @@ export class ProgramComponent implements OnInit {
 
   getFile() {
     //window.location.href = "https://myopiacomment-e053.restdb.io/media/5f707c5a73d1b37e00013ae1?download=true";
-    window.location.href = "https://myopiacomment-e053.restdb.io/media/Ebook+Business+Guide+v4.pdf?key=385608050052956931646";
+    // window.location.href = "https://myopiacomment-e053.restdb.io/media/Ebook+Business+Guide+v4.pdf?key=385608050052956931646";
+    window.location.href = "https://firebasestorage.googleapis.com/v0/b/uploadebook-481eb.appspot.com/o/EBOOK%20MYOPIA%20IS%20REVERSIBLE%20BY%20RENCE.pdf?alt=media&token=950487c8-d41b-495b-9b6b-bd2c5b2b2e9c";
     setTimeout(() => {
       window.location.reload();
     }, 1000)
@@ -79,6 +80,7 @@ export class ProgramComponent implements OnInit {
   download() {
     this.commentService.getPDF().pipe(
       tap(file => {
+        console.log(file)
         const name = 'Myopia Is Reversible.pdf';
         const a = this.renderer.createElement('a');
         this.renderer.setStyle(a, 'display', 'none');
@@ -99,7 +101,7 @@ export class ProgramComponent implements OnInit {
   private initConfig(): void {
     this.payPalConfig = {
       currency: 'USD',
-      //clientId: 'AWxgk37XzMRVMDe4mRDVJf8jfzjLbrERmEVL3ogWG92X7VzC7Y3vA6kSLLr74YVaG0SnfJN_2ZDbDYlm',//TEST
+      // clientId: 'AWxgk37XzMRVMDe4mRDVJf8jfzjLbrERmEVL3ogWG92X7VzC7Y3vA6kSLLr74YVaG0SnfJN_2ZDbDYlm',//TEST
       clientId: 'AbkhF70_dxPo9h5aT5dqDkbCu2ujmAuKmmwFS0XWFLDmcGVQRJ78jpgMdfFyqX2hNa4Fsb6mD--YBzY5',//PROD
       createOrderOnClient: (data) => <ICreateOrderRequest>{
         intent: 'CAPTURE',
