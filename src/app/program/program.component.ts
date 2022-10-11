@@ -24,7 +24,7 @@ export class ProgramComponent implements OnInit {
   public payPalConfig?: IPayPalConfig;
 
   product = {
-    price: 11.99,
+    price: 14.99,
     description: 'Stuck in wearing glasses that you become dependent on it, admiring those who have perfect eyes? ' +
       'In this book, you will discover a proven and very practical methods in improving your eyesight.' +
       'So you can throw your glasses out of your world and enjoy the freedom of an independent life.',
@@ -109,11 +109,11 @@ export class ProgramComponent implements OnInit {
           {
             amount: {
               currency_code: 'USD',
-              value: '11.99',
+              value: '14.99',
               breakdown: {
                 item_total: {
                   currency_code: 'USD',
-                  value: '11.99'
+                  value: '14.99'
                 }
               }
             },
@@ -124,7 +124,7 @@ export class ProgramComponent implements OnInit {
                 category: 'DIGITAL_GOODS',
                 unit_amount: {
                   currency_code: 'USD',
-                  value: '11.99',
+                  value: '14.99',
                 },
               }
             ]
